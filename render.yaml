@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: velorabackend-kri-2651-ti
+    runtime: docker
+    plan: free  
+    
+    healthCheckPath: /api/health
+    
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        value: https://velorafrontend-kri-2651-ti.onrender.com
+      - key: MAPS_API_KEY
+        sync: false 
